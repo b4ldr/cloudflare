@@ -1,0 +1,44 @@
+name: CI
+
+on:
+    push:
+        branches: ["**"]
+    pull_request:
+
+jobs:
+    local-email-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: npm
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run shared local email test
+              run: npm run test:local-email -- sample-email.txt /tmp/maintenance.local.ics
+
+    wrangler-dry-run:
+        if: ${{ github.event_name == 'pull_request' || github.ref == 'refs/heads/main' }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: npm
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Validate Wrangler deploy (dry run)
+              run: npx wrangler deploy --dry-run --env production

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test:local-email": "node scripts/local-email-test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.95.0"
+  }
+}

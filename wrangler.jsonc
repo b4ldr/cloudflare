@@ -1,0 +1,23 @@
+{
+    // Cloudflare Workers Email Routing config
+    "name": "email-maintenance-router",
+    "main": "email_router.js",
+    "compatibility_date": "2026-05-27",
+    // Default vars (used for local dev and default environment)
+    "vars": {
+        "AI_MODEL": "@cf/meta/llama-3.1-8b-instruct",
+        "ALLOW_LIST": "noc@example.net,noc@exampl.com",
+        "SEND_TO": "noc@example.org",
+        "DEBUG": "true"
+    },
+    "env": {
+        "production": {
+            "vars": {
+                "DEBUG": "false"
+            }
+        }
+    },
+    "ai": {
+        "binding": "AI"
+    }
+}

@@ -1,0 +1,21 @@
+From: noc@example.net
+To: mail@example.com
+Subject: Scheduled Database Maintenance - May 28, 2026
+Date: Tue, 27 May 2026 14:30:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+We have scheduled maintenance on our primary database cluster. Please add this to your calendar:
+
+Maintenance Window:
+Start: May 28, 2026 at 10:00 PM UTC
+End: May 29, 2026 at 1:00 AM UTC
+
+During this time, services that depend on the database may experience brief intermittent outages. We will be upgrading the storage layer and applying critical security patches.
+
+Please ensure all long-running jobs are completed before the maintenance window begins.
+
+Thanks,
+Infrastructure Team

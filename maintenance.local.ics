@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Maintenance Router//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2bbae7e7-495a-41f1-9435-a9066fa6d3d4@local
+DTSTAMP:20260527T164954Z
+DTSTART:20260528T220000Z
+DTEND:20260529T010000Z
+SUMMARY:Maintenance Window
+DESCRIPTION:Hi\,\n\nWe have scheduled maintenance on our primary database
+  cluster. Please add this to your calendar:\n\nMaintenance Window:\nStart
+ : May 28\, 2026 at 10:00 PM UTC\nEnd: May 29\, 2026 at 1:00 AM UTC\n\nDur
+ ing this time\, services that depend on the database may experience brief
+  intermittent outages. We will be upgrading the storage layer and applyin
+ g critical security patches.\n\nPlease ensure all long-running jobs are c
+ ompleted before the maintenance window begins.\n\nThanks\,\nInfrastructur
+ e Team
+END:VEVENT
+END:VCALENDAR
